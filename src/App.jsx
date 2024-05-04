@@ -6,6 +6,7 @@ import { InfoInput } from './components/infoInput';
 
 import './App.css'
 import './styles/pageStructure.css'
+import './styles/infoStyles.css';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -42,7 +43,7 @@ function App() {
         <section className='edit-box'>
           Edit Me
           <InfoInput>
-            
+
           </InfoInput>
         </section>
         <section className='display-card'>
