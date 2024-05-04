@@ -1,0 +1,17 @@
+#root {
+    min-width: 900px;
+    /* height: 100%; */
+}
+
+.cv-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 350px;
+    background-color: rgb(227, 184, 120);
+
+}
+
+.edit-box {
+
+}
