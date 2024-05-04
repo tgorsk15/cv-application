@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
+import { InfoInput } from './components/infoInput';
+
 import './App.css'
 import './styles/pageStructure.css'
 
@@ -38,6 +41,9 @@ function App() {
       <section className='cv-section'>
         <section className='edit-box'>
           Edit Me
+          <InfoInput>
+            
+          </InfoInput>
         </section>
         <section className='display-card'>
           Display Me
