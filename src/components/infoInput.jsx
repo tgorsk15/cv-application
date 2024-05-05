@@ -1,6 +1,7 @@
 import dropArrow from '../assets/drop-arrow.png';
 
-export function InfoInput() {
+export function InfoInput({ infoDetails, onChange }) {
+    console.log(infoDetails)
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
@@ -25,7 +26,12 @@ export function InfoInput() {
 
                 <form action="push">
                     <label htmlFor="info-name">Full Name:</label>
-                    <input type="text" id="info-name" name='info-name'/>
+                    <input 
+                        type="text" 
+                        id="info-name"
+                        name='info-name' 
+                        value={infoDetails.fullName}
+                    />
 
                     <label htmlFor="info-email">Email:</label>
                     <input type="text" id="info-email" name='info-email'/>
@@ -33,8 +39,8 @@ export function InfoInput() {
                     <label htmlFor="info-phone">Phone:</label>
                     <input type="text" id="info-phone" name='info-phone'/>
 
-                    <label htmlFor="info-git">Github:</label>
-                    <input type="text" id="info-git" name='info-git'/>
+                    <label htmlFor="info-location">Location:</label>
+                    <input type="text" id="info-location" name='info-location'/>
 
                     <label htmlFor="info-website">Website</label>
                     <input type="text" id="info-website" name='info-website'/>

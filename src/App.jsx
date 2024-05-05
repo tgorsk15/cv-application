@@ -2,38 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
+import { initialInfoDetails } from './components/data';
 import { InfoInput } from './components/infoInput';
 
 import './App.css'
 import './styles/pageStructure.css'
 import './styles/infoStyles.css';
+import { InfoDisplay } from './components/infoDisplay';
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
+
+
+  function handleChangeInfo(property, value) {
+    const newInfoDetails = { ...personalInfo, [property]: value };
+    setPersonalInfo(newInfoDetails);
+  }
 
   return (
-    // <>
-    //   <div>
-    //     <a href="https://vitejs.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
     
     <>
       <header>
@@ -43,11 +29,15 @@ function App() {
         <section className='edit-box'>
           Edit Me
           <InfoInput>
-
+            infoDetails = {personalInfo}
+            onChange = {handleChangeInfo}
           </InfoInput>
         </section>
         <section className='display-card'>
           Display Me
+          <InfoDisplay>
+            infoDetails = {personalInfo}
+          </InfoDisplay>
         </section>
       </section>
     </>
