@@ -2,6 +2,7 @@ import dropArrow from '../assets/drop-arrow.png';
 
 export function InfoInput({ infoDetails, onChange }) {
     console.log(infoDetails)
+    console.log(onChange);
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
@@ -31,22 +32,44 @@ export function InfoInput({ infoDetails, onChange }) {
                         id="info-name"
                         name='info-name' 
                         value={infoDetails.fullName}
+                        onChange={(e) => {
+                            onChange("fullName", e.target.value)
+                        }}
                     />
 
                     <label htmlFor="info-email">Email:</label>
-                    <input type="text" id="info-email" name='info-email'/>
+                    <input 
+                        type="text" 
+                        id="info-email" 
+                        name='info-email'
+                        value={infoDetails.email}
+                        onChange={(e) => {
+                            onChange("email", e.target.value)
+                        }}
+                    />
 
                     <label htmlFor="info-phone">Phone:</label>
-                    <input type="text" id="info-phone" name='info-phone'/>
+                    <input 
+                        type="text" 
+                        id="info-phone" 
+                        name='info-phone'
+                        value={infoDetails.phone}
+                        onChange={(e) => {
+                            onChange("phone", e.target.value)
+                        }}
+                    />
 
                     <label htmlFor="info-location">Location:</label>
-                    <input type="text" id="info-location" name='info-location'/>
+                    <input 
+                        type="text" 
+                        id="info-location" 
+                        name='info-location'
+                        value={infoDetails.location}
+                        onChange={(e) => {
+                            onChange("location", e.target.value)
+                        }}
+                    />
 
-                    <label htmlFor="info-website">Website</label>
-                    <input type="text" id="info-website" name='info-website'/>
-
-                    <label htmlFor="info-LinkedIn">LinkedIn</label>
-                    <input type="text" id="info-LinkedIn" name='info-LinkedIn'/>
 
                     <button className='submit-info' onSubmit={submitInfo}>Save</button>
                 </form>

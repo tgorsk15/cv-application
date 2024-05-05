@@ -4,19 +4,24 @@ import viteLogo from '/vite.svg'
 
 import { initialInfoDetails } from './components/data';
 import { InfoInput } from './components/infoInput';
+import { InfoDisplay } from './components/infoDisplay';
 
 import './App.css'
 import './styles/pageStructure.css'
 import './styles/infoStyles.css';
-import { InfoDisplay } from './components/infoDisplay';
+
 
 function App() {
+  console.log(initialInfoDetails)
   const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
 
 
   function handleChangeInfo(property, value) {
     const newInfoDetails = { ...personalInfo, [property]: value };
     setPersonalInfo(newInfoDetails);
+    console.log(property);
+    console.log(value);
+    console.log(personalInfo);
   }
 
   return (
@@ -28,16 +33,18 @@ function App() {
       <section className='cv-section'>
         <section className='edit-box'>
           Edit Me
-          <InfoInput>
+          <InfoInput 
             infoDetails = {personalInfo}
             onChange = {handleChangeInfo}
-          </InfoInput>
+          />
+            
         </section>
         <section className='display-card'>
           Display Me
-          <InfoDisplay>
+          <InfoDisplay
             infoDetails = {personalInfo}
-          </InfoDisplay>
+          />
+            
         </section>
       </section>
     </>
