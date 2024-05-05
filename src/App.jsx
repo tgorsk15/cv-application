@@ -24,6 +24,14 @@ function App() {
     console.log(personalInfo);
   }
 
+  function handleDeleteUnit() {
+
+  }
+
+  function handleAddUnit() {
+    
+  }
+
   return (
     
     <>
@@ -37,6 +45,8 @@ function App() {
             infoDetails = {personalInfo}
             onChange = {handleChangeInfo}
           />
+
+
             
         </section>
         <section className='display-card'>
