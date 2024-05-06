@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from 'uuid'
+
+console.log(uuidv4());
 
 export const initialInfoDetails = {
     fullName: 'Jack Sparrow',
@@ -5,3 +8,13 @@ export const initialInfoDetails = {
     phone: '630-678-4356',
     location: 'Tortuga, Haiti'
 }
+
+export const educationDataSet = [
+    {
+        school: 'Blackbeard\'s Pirating Brigade',
+        studyLevel: 'Bachelor\'s of Looting',
+        startDate: '03/24/1653',
+        endDate: '05/16/1655',
+        id: uuidv4()
+    }
+]

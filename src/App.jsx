@@ -2,9 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-import { initialInfoDetails } from './components/data';
+import { initialInfoDetails, educationDataSet } from './components/data';
 import { InfoInput } from './components/infoInput';
 import { InfoDisplay } from './components/infoDisplay';
+import { EducationInput } from './components/educationInput';
 
 import './App.css'
 import './styles/pageStructure.css'
@@ -15,13 +16,16 @@ function App() {
   console.log(initialInfoDetails)
   const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
 
+  console.log(educationDataSet)
+  const [educationInfo, setEducationInfo] = useState(educationDataSet);
+
 
   function handleChangeInfo(property, value) {
     const newInfoDetails = { ...personalInfo, [property]: value };
     setPersonalInfo(newInfoDetails);
-    console.log(property);
-    console.log(value);
-    console.log(personalInfo);
+    // console.log(property);
+    // console.log(value);
+    // console.log(personalInfo);
   }
 
   function handleDeleteUnit() {
@@ -29,7 +33,7 @@ function App() {
   }
 
   function handleAddUnit() {
-    
+
   }
 
   return (
@@ -46,7 +50,9 @@ function App() {
             onChange = {handleChangeInfo}
           />
 
-
+          <EducationInput
+            educationData = {educationInfo}
+          />
             
         </section>
         <section className='display-card'>
