@@ -1,8 +1,13 @@
 import dropArrow from '../assets/drop-arrow.png';
 
 export function EducationInput ({ educationData }) {
+    console.log(educationData)
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
+
+    function storeEducationInputs(educationID, educationStorage, value) {
+        console.log('hi')
+    }
 
 
     return (
@@ -14,16 +19,38 @@ export function EducationInput ({ educationData }) {
             </button>
 
             <div className='education-inputs-container'>
-                {educationData.map((education, index) => (
-                    <form action="push" key={education.id}>
-                        <label htmlFor="school-name">School:</label>
-                        <input 
-                            type="text"
+                {educationData.map((education) => {
+                    const educationStorage = education
 
-                        />
-                    </form>
-                ))}
-                
+                    return (
+                        <form action="push" key={education.id}>
+                        
+                            <label htmlFor="school-name">School:</label>
+                            <input 
+                                type="text"
+                                name='school-name'
+                                value={education.school}
+                                onChange={(e) => {
+                                    storeEducationInputs(education.id, educationStorage, e.target.value)
+                                }}
+                            />
+                            <button className='Save'>
+                                Save
+                            </button>
+                            <button className='delete'>
+                                Delete
+                            </button>
+                        </form>
+
+                    )
+                    
+                    
+                })}
+                <form className='education-add-form'>
+                    <button className='add-education'>
+                        Add +
+                    </button>
+                </form>
 
             </div>
 
