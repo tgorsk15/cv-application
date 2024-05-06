@@ -5,9 +5,21 @@ export function EducationInput ({ educationData }) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
-    function storeEducationInputs(educationID, educationStorage, value) {
-        console.log('hi')
+    let educationStorage= educationData
+    console.log(educationStorage)
+
+    function storeEducationInputs(education, property, value) {
+        const tempStorage = [...educationStorage]
+        tempStorage[education] = {
+            ...tempStorage[education], [property]: value
+        }
+        console.log(tempStorage)
+        
+        educationStorage = tempStorage
+        console.log(educationStorage)
     }
+
+    
 
 
     return (
@@ -19,9 +31,9 @@ export function EducationInput ({ educationData }) {
             </button>
 
             <div className='education-inputs-container'>
-                {educationData.map((education) => {
-                    const educationStorage = education
-
+                {educationStorage.map((education) => {
+                    // const educationStorage = education
+                    
                     return (
                         <form action="push" key={education.id}>
                         
@@ -31,7 +43,7 @@ export function EducationInput ({ educationData }) {
                                 name='school-name'
                                 value={education.school}
                                 onChange={(e) => {
-                                    storeEducationInputs(education.id, educationStorage, e.target.value)
+                                    storeEducationInputs(education, "school", e.target.value)
                                 }}
                             />
                             <button className='Save'>
