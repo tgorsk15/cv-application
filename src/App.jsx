@@ -6,6 +6,7 @@ import { initialInfoDetails, educationDataSet } from './components/data';
 import { InfoInput } from './components/infoInput';
 import { InfoDisplay } from './components/infoDisplay';
 import { EducationInput } from './components/educationInput';
+import { EducationDisplay } from './components/educationDisplay';
 
 import './App.css'
 import './styles/pageStructure.css'
@@ -59,6 +60,9 @@ function App() {
           Display Me
           <InfoDisplay
             infoDetails = {personalInfo}
+          />
+          <EducationDisplay
+            educationData = {educationInfo}
           />
             
         </section>
