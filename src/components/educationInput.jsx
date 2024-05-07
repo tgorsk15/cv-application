@@ -1,22 +1,35 @@
+import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
 export function EducationInput ({ educationData }) {
-    console.log(educationData)
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
     let educationStorage= educationData
-    console.log(educationStorage)
 
-    function storeEducationInputs(education, property, value) {
-        const tempStorage = [...educationStorage]
-        tempStorage[education] = {
-            ...tempStorage[education], [property]: value
+    const [tempEducationData, setTempData] = useState(educationStorage)
+
+    function storeEducationInputs(educationID, property, value) {
+        const activeIndex = getActiveIndex(tempEducationData, educationID);
+        console.log(activeIndex)
+
+        const tempStorage = [...tempEducationData]
+        tempStorage[activeIndex] = {
+            ...tempStorage[activeIndex], [property]: value
         }
         console.log(tempStorage)
         
-        educationStorage = tempStorage
-        console.log(educationStorage)
+        setTempData(tempStorage)
+    }
+
+    function getActiveIndex(dataArray, id) {
+        console.log(id);
+        for (let i = 0; i < dataArray.length; i++) {
+            // console.log(dataArray[i].id)
+            if (dataArray[i].id === id) {
+                return i
+            }
+        }
     }
 
     
@@ -31,7 +44,7 @@ export function EducationInput ({ educationData }) {
             </button>
 
             <div className='education-inputs-container'>
-                {educationStorage.map((education) => {
+                {tempEducationData.map((education) => {
                     // const educationStorage = education
                     
                     return (
@@ -43,7 +56,7 @@ export function EducationInput ({ educationData }) {
                                 name='school-name'
                                 value={education.school}
                                 onChange={(e) => {
-                                    storeEducationInputs(education, "school", e.target.value)
+                                    storeEducationInputs(education.id, "school", e.target.value)
                                 }}
                             />
                             <button className='Save'>
