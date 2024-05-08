@@ -24,9 +24,11 @@ function App() {
   function handleChangeInfo(property, value) {
     const newInfoDetails = { ...personalInfo, [property]: value };
     setPersonalInfo(newInfoDetails);
-    // console.log(property);
-    // console.log(value);
-    // console.log(personalInfo);
+    
+  }
+
+  function handleChangeEducation(currentEducationData) {
+    setEducationInfo(currentEducationData);
   }
 
   function handleDeleteUnit() {
@@ -53,6 +55,7 @@ function App() {
 
           <EducationInput
             educationData = {educationInfo}
+            educationChange = {handleChangeEducation}
           />
             
         </section>

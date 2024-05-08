@@ -1,7 +1,6 @@
 
 
 export function EducationDisplay({ educationData }) {
-    console.log(educationData)
 
     return (
         
@@ -10,7 +9,6 @@ export function EducationDisplay({ educationData }) {
 
             <div className="education-details">
                 {educationData.map((education) => {
-                    console.log(education)
                     return (
                         <div key={education.id}>
                             <h4>{education.school}</h4>

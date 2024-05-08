@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
-export function EducationInput ({ educationData }) {
+export function EducationInput ({ educationData, educationChange }) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
     let educationStorage= educationData
-
     const [tempEducationData, setTempData] = useState(educationStorage)
 
+
     function storeEducationInputs(educationID, property, value) {
+
         const activeIndex = getActiveIndex(tempEducationData, educationID);
         console.log(activeIndex)
 
@@ -32,6 +33,13 @@ export function EducationInput ({ educationData }) {
         }
     }
 
+
+    function handleSaveEducation(currentData) {
+        const newEducationState = [...currentData]
+        console.log(newEducationState);
+        educationChange(newEducationState);
+
+    }
     
 
 
@@ -59,7 +67,12 @@ export function EducationInput ({ educationData }) {
                                     storeEducationInputs(education.id, "school", e.target.value)
                                 }}
                             />
-                            <button className='Save'>
+                            <button className='Save'
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleSaveEducation(tempEducationData)
+                                }}
+                            >
                                 Save
                             </button>
                             <button className='delete'>
