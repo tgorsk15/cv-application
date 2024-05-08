@@ -31,7 +31,7 @@ function App() {
     setEducationInfo(currentEducationData);
   }
 
-  function handleDeleteUnit() {
+  function handleDeleteEducation(currentEducationData, educationID, ) {
 
   }
 
@@ -56,6 +56,7 @@ function App() {
           <EducationInput
             educationData = {educationInfo}
             educationChange = {handleChangeEducation}
+            educationDelete = {handleDeleteEducation}
           />
             
         </section>

@@ -102,7 +102,12 @@ export function EducationInput ({ educationData, educationChange }) {
                             >
                                 Save
                             </button>
-                            <button className='delete'>
+                            <button className='delete'
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    
+                                }}
+                            >
                                 Delete
                             </button>
                         </form>
@@ -116,6 +121,8 @@ export function EducationInput ({ educationData, educationChange }) {
                         Add +
                     </button>
                 </form>
+                <br></br>
+                <br />
 
             </div>
 

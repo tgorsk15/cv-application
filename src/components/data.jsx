@@ -15,5 +15,13 @@ export const educationDataSet = [
         startDate: '03/24/1653',
         endDate: '05/16/1655',
         id: uuidv4()
-    }
+    },
+    {
+        school: 'I am lonely',
+        studyLevel: 'I\'m a failure',
+        startDate: '03/24/1997',
+        endDate: 'present',
+        id: uuidv4()
+    },
+
 ]

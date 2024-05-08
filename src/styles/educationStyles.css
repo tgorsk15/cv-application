@@ -1,0 +1,20 @@
+/* Edit Side */
+
+.education-edit-form {
+    margin-bottom: 30px;
+}
+
+.education-add-form {
+    /* margin-bottom: 30px; */
+}
+
+
+
+
+
+/* Display side */
+
+.education-display{
+    border-top: 2px solid black;
+    margin-bottom: 40px;
+}
