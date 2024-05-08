@@ -26,7 +26,6 @@ export function EducationInput ({ educationData, educationChange }) {
     function getActiveIndex(dataArray, id) {
         console.log(id);
         for (let i = 0; i < dataArray.length; i++) {
-            // console.log(dataArray[i].id)
             if (dataArray[i].id === id) {
                 return i
             }
@@ -67,6 +66,34 @@ export function EducationInput ({ educationData, educationChange }) {
                                     storeEducationInputs(education.id, "school", e.target.value)
                                 }}
                             />
+                            <label htmlFor="degree-level">Level Achieved:</label>
+                            <input
+                                type='text'
+                                name='degree-level'
+                                value={education.studyLevel}
+                                onChange={(e) => {
+                                    storeEducationInputs(education.id, "studyLevel", e.target.value)
+                                }}
+                            />
+                            <label htmlFor="start-date">Start Date:</label>
+                            <input
+                                type='text'
+                                name='start-date'
+                                value={education.startDate}
+                                onChange={(e) => {
+                                    storeEducationInputs(education.id, "startDate", e.target.value)
+                                }}
+                            />
+                            <label htmlFor="end-date">End Date:</label>
+                            <input
+                                type='text'
+                                name='end-date'
+                                value={education.endDate}
+                                onChange={(e) => {
+                                    storeEducationInputs(education.id, "endDate", e.target.value)
+                                }}
+                            />
+
                             <button className='Save'
                                 onClick={(e) => {
                                     e.preventDefault();

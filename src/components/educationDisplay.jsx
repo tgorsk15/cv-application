@@ -12,6 +12,9 @@ export function EducationDisplay({ educationData }) {
                     return (
                         <div key={education.id}>
                             <h4>{education.school}</h4>
+                            <h4>{education.studyLevel}</h4>
+                            <h4>{education.startDate}</h4>
+                            <h4>{education.endDate}</h4>
                         </div>
                         
                     )
