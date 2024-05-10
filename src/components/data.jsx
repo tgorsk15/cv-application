@@ -25,3 +25,14 @@ export const educationDataSet = [
     },
 
 ]
+
+export const experienceDataSet = [
+    {
+        employer: '',
+        role: '',
+        startDate: '',
+        endDate: '',
+        id: uuidv4()
+    },
+    
+]

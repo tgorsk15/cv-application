@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { initialInfoDetails, educationDataSet } from './components/data';
+import { initialInfoDetails, educationDataSet, experienceDataSet } from './components/data';
 import { InfoInput } from './components/infoInput';
 import { InfoDisplay } from './components/infoDisplay';
 import { EducationInput } from './components/educationInput';
 import { EducationDisplay } from './components/educationDisplay';
+import { ExperienceInput } from './components/experienceInput';
 
 import './App.css'
 import './styles/pageStructure.css';
@@ -88,7 +89,10 @@ function App() {
             educationDelete = {handleDeleteEducation}
             educationAdd = {handleAddItem}
           />
-            
+          
+          <ExperienceInput
+
+          />
         </section>
         <section className='display-card'>
           
