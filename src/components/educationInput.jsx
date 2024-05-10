@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
-export function EducationInput ({ educationData, educationChange }) {
+export function EducationInput ({ educationData, educationChange, educationDelete }) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
-    let educationStorage= educationData
+    let educationStorage = educationData
     const [tempEducationData, setTempData] = useState(educationStorage)
 
 
@@ -39,6 +39,22 @@ export function EducationInput ({ educationData, educationChange }) {
         educationChange(newEducationState);
 
     }
+
+    // function handleDeleteEducation(currentEducationData, educationID ) {
+    //     console.log(currentEducationData)
+    //     console.log(educationID)
+    //     const newEducationData = [...currentEducationData];
+    //     for (let i = 0; i < newEducationData.length; i++) {
+    //       if (newEducationData[i].id === educationID) {
+    //         console.log(`Bag em ${newEducationData[i].school}`)
+            
+    //         newEducationData.splice(i, 1);
+    //         console.log(newEducationData);
+    //         educationChange(newEducationData);
+            
+    //       }
+    //   }
+    // }
     
 
 
@@ -55,7 +71,7 @@ export function EducationInput ({ educationData, educationChange }) {
                     // const educationStorage = education
                     
                     return (
-                        <form action="push" key={education.id}>
+                        <form action="push" className='education-edit-form' key={education.id}>
                         
                             <label htmlFor="school-name">School:</label>
                             <input 
@@ -105,7 +121,7 @@ export function EducationInput ({ educationData, educationChange }) {
                             <button className='delete'
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    
+                                    educationDelete(tempEducationData, education.id);
                                 }}
                             >
                                 Delete
@@ -121,8 +137,7 @@ export function EducationInput ({ educationData, educationChange }) {
                         Add +
                     </button>
                 </form>
-                <br></br>
-                <br />
+                
 
             </div>
 

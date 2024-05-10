@@ -9,15 +9,15 @@ import { EducationInput } from './components/educationInput';
 import { EducationDisplay } from './components/educationDisplay';
 
 import './App.css'
-import './styles/pageStructure.css'
+import './styles/pageStructure.css';
 import './styles/infoStyles.css';
+import './styles/educationStyles.css';
 
 
 function App() {
-  console.log(initialInfoDetails)
+  console.log('app running')
   const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
 
-  console.log(educationDataSet)
   const [educationInfo, setEducationInfo] = useState(educationDataSet);
 
 
@@ -28,12 +28,27 @@ function App() {
   }
 
   function handleChangeEducation(currentEducationData) {
+    console.log('changing it')
     setEducationInfo(currentEducationData);
   }
 
-  function handleDeleteEducation(currentEducationData, educationID, ) {
-
+  
+  function handleDeleteEducation(currentEducationData, educationID ) {
+    console.log(educationID)
+    
+    for (let i = 0; i < currentEducationData.length; i++) {
+      if (currentEducationData[i].id === educationID) {
+        console.log(`Bag em ${currentEducationData[i].school}`)
+        
+        currentEducationData.splice(i, 1);
+        console.log(currentEducationData);
+        const newEducationData = [...currentEducationData];
+        setEducationInfo(newEducationData);
+        
+      }
+    }
   }
+
 
   function handleAddUnit() {
 
