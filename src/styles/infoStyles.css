@@ -1,3 +1,14 @@
 .info-inputs-container {
     max-width: 500px;
 }
+
+.info-display-container {
+
+}
+
+.info-details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}

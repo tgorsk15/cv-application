@@ -1,11 +1,36 @@
 /* Edit Side */
 
 .education-edit-form {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     margin-bottom: 30px;
+}
+
+.education-dates {
+    /* display: flex; */
 }
 
 .education-add-form {
     /* margin-bottom: 30px; */
+}
+
+.education-edit-form > label {
+    display: block;
+    text-align: left;
+}
+
+#school-name, #degree-level {
+    max-width: 240px;
+}
+
+#start-date, #end-date {
+    max-width: 85px;
+}
+
+#start-date {
+    margin-right: 40px;
 }
 
 

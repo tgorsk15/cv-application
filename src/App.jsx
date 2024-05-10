@@ -76,7 +76,7 @@ function App() {
       </header>
       <section className='cv-section'>
         <section className='edit-box'>
-          Edit Me
+          
           <InfoInput 
             infoDetails = {personalInfo}
             onChange = {handleChangeInfo}
@@ -91,7 +91,7 @@ function App() {
             
         </section>
         <section className='display-card'>
-          Display Me
+          
           <InfoDisplay
             infoDetails = {personalInfo}
           />

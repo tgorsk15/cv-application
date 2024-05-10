@@ -66,6 +66,7 @@ export function EducationInput ({
                             <input 
                                 type="text"
                                 name='school-name'
+                                id='school-name'
                                 value={education.school}
                                 onChange={(e) => {
                                     storeEducationInputs(education.id, "school", e.target.value)
@@ -75,29 +76,35 @@ export function EducationInput ({
                             <input
                                 type='text'
                                 name='degree-level'
+                                id='degree-level'
                                 value={education.studyLevel}
                                 onChange={(e) => {
                                     storeEducationInputs(education.id, "studyLevel", e.target.value)
                                 }}
                             />
-                            <label htmlFor="start-date">Start Date:</label>
-                            <input
-                                type='text'
-                                name='start-date'
-                                value={education.startDate}
-                                onChange={(e) => {
-                                    storeEducationInputs(education.id, "startDate", e.target.value)
-                                }}
-                            />
-                            <label htmlFor="end-date">End Date:</label>
-                            <input
-                                type='text'
-                                name='end-date'
-                                value={education.endDate}
-                                onChange={(e) => {
-                                    storeEducationInputs(education.id, "endDate", e.target.value)
-                                }}
-                            />
+                            <div className='education-dates'>
+                                <label htmlFor="start-date">Start Date:</label>
+                                <input
+                                    type='text'
+                                    name='start-date'
+                                    id='start-date'
+                                    value={education.startDate}
+                                    onChange={(e) => {
+                                        storeEducationInputs(education.id, "startDate", e.target.value)
+                                    }}
+                                />
+                                <label htmlFor="end-date">End Date:</label>
+                                <input
+                                    type='text'
+                                    name='end-date'
+                                    id='end-date'
+                                    value={education.endDate}
+                                    onChange={(e) => {
+                                        storeEducationInputs(education.id, "endDate", e.target.value)
+                                    }}
+                                />
+                            </div>
+                            
 
                             <button className='Save'
                                 onClick={(e) => {
