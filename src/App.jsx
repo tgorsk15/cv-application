@@ -15,10 +15,12 @@ import './styles/educationStyles.css';
 
 
 function App() {
-  console.log('app running')
+  // console.log('app running')
   const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
 
   const [educationInfo, setEducationInfo] = useState(educationDataSet);
+
+  const [experienceInfo, setExperienceInfo] = useState(experienceDataSet)
 
 
   function handleChangeInfo(property, value) {
@@ -91,7 +93,7 @@ function App() {
           />
           
           <ExperienceInput
-
+            experienceData = {experienceInfo}
           />
         </section>
         <section className='display-card'>

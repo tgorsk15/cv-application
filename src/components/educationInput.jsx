@@ -10,8 +10,8 @@ export function EducationInput ({
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
-    let educationStorage = educationData
-    const [tempEducationData, setTempData] = useState(educationStorage)
+    // let educationStorage = educationData
+    const [tempEducationData, setTempData] = useState(educationData)
 
 
     function storeEducationInputs(educationID, property, value) {
