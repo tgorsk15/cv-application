@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
-export function EducationInput ({ educationData, educationChange, educationDelete }) {
+export function EducationInput ({ 
+    educationData, 
+    educationChange, 
+    educationDelete,
+    educationAdd
+}) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
@@ -39,22 +44,6 @@ export function EducationInput ({ educationData, educationChange, educationDelet
         educationChange(newEducationState);
 
     }
-
-    // function handleDeleteEducation(currentEducationData, educationID ) {
-    //     console.log(currentEducationData)
-    //     console.log(educationID)
-    //     const newEducationData = [...currentEducationData];
-    //     for (let i = 0; i < newEducationData.length; i++) {
-    //       if (newEducationData[i].id === educationID) {
-    //         console.log(`Bag em ${newEducationData[i].school}`)
-            
-    //         newEducationData.splice(i, 1);
-    //         console.log(newEducationData);
-    //         educationChange(newEducationData);
-            
-    //       }
-    //   }
-    // }
     
 
 
@@ -133,7 +122,12 @@ export function EducationInput ({ educationData, educationChange, educationDelet
                     
                 })}
                 <form className='education-add-form'>
-                    <button className='add-education'>
+                    <button className='add-education'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            educationAdd(tempEducationData);
+                        }}
+                    >
                         Add +
                     </button>
                 </form>

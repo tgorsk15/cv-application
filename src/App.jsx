@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { v4 as uuidv4 } from 'uuid'
 
 import { initialInfoDetails, educationDataSet } from './components/data';
 import { InfoInput } from './components/infoInput';
@@ -50,8 +49,23 @@ function App() {
   }
 
 
-  function handleAddUnit() {
-
+  function handleAddItem(currentData) {
+    console.log(currentData);
+    // check to see if it's education or experience being added
+    if (currentData[0].school) {
+      const newEducation = {
+      school: '',
+      studyLevel: '',
+      startDate: '',
+      endDate: '',
+      id: uuidv4()
+    }
+      currentData.push(newEducation)
+      const newData = [...currentData]
+      console.log(newData)
+      setEducationInfo(newData)
+    }
+    
   }
 
   return (
@@ -72,6 +86,7 @@ function App() {
             educationData = {educationInfo}
             educationChange = {handleChangeEducation}
             educationDelete = {handleDeleteEducation}
+            educationAdd = {handleAddItem}
           />
             
         </section>
