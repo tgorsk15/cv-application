@@ -95,22 +95,25 @@ return (
                                 }}
                                  />
                             </div>
-                             <button className='Save'
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleSaveExperience(tempExperienceData);
-                                }}
-                            >
-                                Save
-                            </button>
-                            <button className='delete'
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    experienceDelete(tempExperienceData, experience.id)
-                                }}
-                            >
-                                Delete
-                            </button>
+                            <div className='experience-buttons'>
+                                <button className='save'
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleSaveExperience(tempExperienceData);
+                                    }}
+                                >
+                                    Save
+                                </button>
+                                <button className='delete'
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        experienceDelete(tempExperienceData, experience.id)
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                            </div>
+                             
                         </form>
                     )
 

@@ -23,7 +23,7 @@ export function InfoInput({ infoDetails, onChange }) {
             
             <div className="info-inputs-container">
 
-                <form action="push">
+                <form action="push" className='info-form'>
                     <label htmlFor="info-name">Full Name:</label>
                     <input 
                         type="text" 
@@ -68,8 +68,6 @@ export function InfoInput({ infoDetails, onChange }) {
                         }}
                     />
 
-
-                    <button className='submit-info' onSubmit={submitInfo}>Save</button>
                 </form>
                 
 

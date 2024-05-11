@@ -20,8 +20,12 @@
 
 .display-card {
     background-color: azure;
-    min-width: 750px;
+    min-width: 820px;
 }
+
+/* edit form */
+
+
 
 @media (max-width: 1600px) {
     #root {

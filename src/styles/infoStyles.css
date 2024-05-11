@@ -6,6 +6,20 @@
 
 }
 
+.info-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-form > label {
+    display: block;
+    text-align: left;
+}
+
+.info-form > input {
+    max-width: 250px;
+}
+
 .info-details {
     display: flex;
     justify-content: space-evenly;

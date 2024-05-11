@@ -103,23 +103,25 @@ export function EducationInput ({
                                 />
                             </div>
                             
-
-                            <button className='Save'
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleSaveEducation(tempEducationData)
-                                }}
-                            >
-                                Save
-                            </button>
-                            <button className='delete'
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    educationDelete(tempEducationData, education.id);
-                                }}
-                            >
-                                Delete
-                            </button>
+                            <div className='education-buttons'>
+                                <button className='save'
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleSaveEducation(tempEducationData)
+                                    }}
+                                >
+                                    Save
+                                </button>
+                                <button className='delete'
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        educationDelete(tempEducationData, education.id);
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                            </div>
+                            
                         </form>
 
                     )

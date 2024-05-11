@@ -13,6 +13,7 @@ import './App.css'
 import './styles/pageStructure.css';
 import './styles/infoStyles.css';
 import './styles/educationStyles.css';
+import './styles/experienceStyles.css';
 
 
 function App() {

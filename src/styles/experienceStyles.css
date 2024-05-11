@@ -1,0 +1,21 @@
+.experience-edit-form {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(161, 133, 216);
+    padding: 20px;
+}
+
+.experience-edit-form > label {
+    display: block;
+    text-align: left;
+}
+
+
+
+
+.experience-buttons {
+    display: flex;
+}
