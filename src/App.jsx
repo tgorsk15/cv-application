@@ -40,8 +40,6 @@ function App() {
     
     for (let i = 0; i < currentEducationData.length; i++) {
       if (currentEducationData[i].id === educationID) {
-        console.log(`Bag em ${currentEducationData[i].school}`)
-        
         currentEducationData.splice(i, 1);
         console.log(currentEducationData);
         const newEducationData = [...currentEducationData];
@@ -54,6 +52,20 @@ function App() {
   function handleChangeExperience(currentExperienceData) {
     console.log('experiencing')
     setExperienceInfo(currentExperienceData);
+  }
+
+  function handleDeleteExperience(currentExperienceData, experienceID) {
+    console.log(experienceID);
+    for (let i = 0; i < currentExperienceData.length; i++) {
+      if (currentExperienceData[i].id === experienceID) {
+        console.log(`Bag the bitch ${currentExperienceData[i].employer}`)
+
+        currentExperienceData.splice(i, 1);
+        console.log(currentExperienceData)
+        const newExperienceData = [...currentExperienceData];
+        setExperienceInfo(newExperienceData);
+      }
+    }
   }
 
 
@@ -100,6 +112,7 @@ function App() {
           <ExperienceInput
             experienceData = {experienceInfo}
             experienceChange = {handleChangeExperience}
+            experienceDelete = {handleDeleteExperience}
           />
         </section>
         <section className='display-card'>

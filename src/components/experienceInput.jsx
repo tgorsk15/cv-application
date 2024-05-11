@@ -2,7 +2,7 @@ import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
 
-export function ExperienceInput ({experienceData, experienceChange}) {
+export function ExperienceInput ({experienceData, experienceChange, experienceDelete}) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
@@ -68,6 +68,28 @@ return (
                                     storeExperienceInputs(experience.id, "role", e.target.value)
                                 }}
                             />
+                            <div className='education-dates'>
+                                <label htmlFor="start-date">Start Date:</label>
+                                <input 
+                                    type="text"
+                                    name='start-date'
+                                    id='start-date'
+                                    value={experience.startDate}
+                                    onChange={(e) => {
+                                    storeExperienceInputs(experience.id, "startDate", e.target.value)
+                                }}
+                                 />
+                                <label htmlFor="end-date">End Date:</label>
+                                <input 
+                                    type="text"
+                                    name='end-date'
+                                    id='end-date'
+                                    value={experience.endDate}
+                                    onChange={(e) => {
+                                    storeExperienceInputs(experience.id, "endDate", e.target.value)
+                                }}
+                                 />
+                            </div>
                              <button className='Save'
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -79,7 +101,7 @@ return (
                             <button className='delete'
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    
+                                    experienceDelete(tempExperienceData, experience.id)
                                 }}
                             >
                                 Delete
