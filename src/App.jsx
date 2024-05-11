@@ -119,8 +119,8 @@ function App() {
   return (
     
     <>
-      <header>
-        My CV Builder
+      <header className='site-header'>
+        <h1 className='site-title'>My CV Builder</h1>
       </header>
       <section className='cv-section'>
         <section className='edit-box'>

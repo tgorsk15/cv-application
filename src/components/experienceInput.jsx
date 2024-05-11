@@ -8,8 +8,6 @@ export function ExperienceInput ({
     experienceDelete,
     experienceAdd
     }) {
-    const arrowIcon = new Image()
-    arrowIcon.src = dropArrow;
 
     const [tempExperienceData, setTempData] = useState(experienceData)
 
@@ -44,10 +42,6 @@ export function ExperienceInput ({
 return (
     <>
         <h2 className="experience-header">Experience</h2>
-            <button className="dropdown-button">
-                {/* not working... need to come back to this: */}
-                {/* {arrowIcon} */}
-            </button>
 
             <div className='experience-inputs-container'>
                 {tempExperienceData.map((experience) => {
@@ -73,7 +67,7 @@ return (
                                     storeExperienceInputs(experience.id, "role", e.target.value)
                                 }}
                             />
-                            <div className='education-dates'>
+                            <div className='experience-dates'>
                                 <label htmlFor="start-date">Start Date:</label>
                                 <input 
                                     type="text"
@@ -118,13 +112,13 @@ return (
                     )
 
                 })}
-                <button className='add-education'
+                <button className='add-experience'
                     onClick={(e) => {
                         e.preventDefault();
                         experienceAdd(tempExperienceData)
                     }}
                 >
-                    Add +
+                    Add New
                 </button>
             </div>
     </>

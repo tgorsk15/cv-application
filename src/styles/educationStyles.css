@@ -5,17 +5,19 @@
 }
 
 .education-edit-form {
-    /* display: block; */
     display: flex;
     flex-direction: column;
-    gap: 10px;
     margin-bottom: 30px;
     background-color: lightblue;
+    border-radius: 25px;
     padding: 20px;
+    box-shadow: 0px 2px 2px rgb(120, 119, 119);
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .education-dates {
-    /* display: flex; */
+    margin-bottom: 10px
 }
 
 .education-add-form {
@@ -27,16 +29,22 @@
     text-align: left;
 }
 
+.education-edit-form > input {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
 #school-name, #degree-level {
     max-width: 240px;
 }
 
 #start-date, #end-date {
     max-width: 85px;
+    margin-left: 3px;
 }
 
 #start-date {
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 .education-buttons {
@@ -45,6 +53,16 @@
 
 .save, .delete {
     margin: 0px 15px;
+}
+
+.save {
+    background-color: rgb(68, 129, 195);
+    color: white;
+}
+
+.delete {
+    background-color: rgb(191, 81, 81);
+    color: white;
 }
 
 

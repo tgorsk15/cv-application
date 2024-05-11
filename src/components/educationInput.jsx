@@ -48,10 +48,6 @@ export function EducationInput ({
     return (
         <>
             <h2 className="education-header">Education</h2>
-            <button className="dropdown-button">
-                {/* not working... need to come back to this: */}
-                {/* {arrowIcon} */}
-            </button>
 
             <div className='education-inputs-container'>
                 {tempEducationData.map((education) => {
@@ -135,7 +131,7 @@ export function EducationInput ({
                             educationAdd(tempEducationData);
                         }}
                     >
-                        Add +
+                        Add New
                     </button>
                 </form>
                 

@@ -16,10 +16,6 @@ export function InfoInput({ infoDetails, onChange }) {
     return (
         <>
             <h2 className="info-header">About You</h2>
-            <button className="dropdown-button">
-                {/* not working... need to come back to this: */}
-                {/* {arrowIcon} */}
-            </button>
             
             <div className="info-inputs-container">
 

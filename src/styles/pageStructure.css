@@ -1,6 +1,22 @@
+body {
+    background-color: rgb(238, 238, 238);
+    position: relative;
+}
+
 #root {
     min-width: 1600px;
-    /* height: 100%; */
+    padding: 0px 20px;
+}
+
+.site-header {
+    position: relative;
+    height: 85px;
+}
+
+.site-title {
+    position: absolute;
+    left: 15%;
+    top: 0px;
 }
 
 .cv-section {
@@ -13,17 +29,34 @@
 }
 
 .edit-box {
+    position: relative;
     max-width: 30%;
-    background-color: rgb(227, 184, 120);
+    background-color: rgb(156, 176, 196);
     padding: 0px 25px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .display-card {
-    background-color: azure;
+    background-color: white;
+    border: 2px solid black;
     min-width: 820px;
 }
 
 /* edit form */
+
+input {
+    padding: 4px;
+    border: solid 2px grey;
+    border-radius: 25px;
+}
+
+.add-experience, .add-education {
+    height: 40px;
+    text-align: center;
+}
 
 
 
