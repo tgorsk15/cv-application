@@ -102,19 +102,6 @@ function App() {
     
   }
 
-  // function handleAddExperience(currentData) {
-  //   const newExperience = {
-  //     employer: '',
-  //     role: '',
-  //     startDate: '',
-  //     endDate: '',
-  //     id: uuidv4()
-  //   };
-  //   currentData.push(newExperience);
-  //   const newData = [...currentData];
-  //   console.log(newData);
-  //   setExperienceInfo(newData)
-  // }
 
   return (
     

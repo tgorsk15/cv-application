@@ -5,16 +5,18 @@ export function EducationDisplay({ educationData }) {
     return (
         
         <div className="education-display-container">
-            <h2>Education</h2>
+            <h2 className="education-title">Education</h2>
 
             <div className="education-details">
                 {educationData.map((education) => {
                     return (
                         <div key={education.id} className="education-display">
-                            <h4>{education.school}</h4>
-                            <h4>{education.studyLevel}</h4>
-                            <h4>{education.startDate}</h4>
-                            <h4>{education.endDate}</h4>
+                            <p className="school-info-display">
+                                <span className="school-display">{education.school}</span> - <span className="study-display">{education.studyLevel}</span>
+                            </p>
+                            <p className="education-dates-display">
+                                {education.startDate} - {education.endDate}
+                            </p>
                         </div>
                         
                     )

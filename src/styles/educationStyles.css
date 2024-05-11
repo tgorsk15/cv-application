@@ -69,7 +69,30 @@
 
 /* Display side */
 
+.education-title {
+    border-bottom: 3px solid black;
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
 .education-display{
-    border-top: 2px solid black;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.school-display {
+    font-weight: bold;
+}
+
+.study-display {
+    font-style: italic;
+}
+
+.education-dates-display {
+    font-style: oblique;
 }

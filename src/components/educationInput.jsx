@@ -144,9 +144,3 @@ export function EducationInput ({
     )
 }
 
-// possibly create a new object and add to EducationList as an array item
-// that has all the details of ONE Education instance.
-
-// then when "Add New" is clicked, the display Education component
-// will read the contents of each education object in EducationList, and
-// render the display of it
