@@ -74,19 +74,46 @@ function App() {
     // check to see if it's education or experience being added
     if (currentData[0].school) {
       const newEducation = {
-      school: '',
-      studyLevel: '',
-      startDate: '',
-      endDate: '',
-      id: uuidv4()
+        school: '',
+        studyLevel: '',
+        startDate: '',
+        endDate: '',
+        id: uuidv4()
     }
       currentData.push(newEducation)
       const newData = [...currentData]
       console.log(newData)
       setEducationInfo(newData)
+
+    } else if (currentData[0].employer) {
+      const newExperience = {
+        employer: '',
+        role: '',
+        startDate: '',
+        endDate: '',
+        id: uuidv4()
+      };
+      currentData.push(newExperience);
+      const newData = [...currentData];
+      console.log(newData);
+      setExperienceInfo(newData)
     }
     
   }
+
+  // function handleAddExperience(currentData) {
+  //   const newExperience = {
+  //     employer: '',
+  //     role: '',
+  //     startDate: '',
+  //     endDate: '',
+  //     id: uuidv4()
+  //   };
+  //   currentData.push(newExperience);
+  //   const newData = [...currentData];
+  //   console.log(newData);
+  //   setExperienceInfo(newData)
+  // }
 
   return (
     
@@ -113,6 +140,7 @@ function App() {
             experienceData = {experienceInfo}
             experienceChange = {handleChangeExperience}
             experienceDelete = {handleDeleteExperience}
+            experienceAdd = {handleAddItem}
           />
         </section>
         <section className='display-card'>

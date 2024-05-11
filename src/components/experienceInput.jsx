@@ -2,7 +2,12 @@ import { useState } from 'react';
 import dropArrow from '../assets/drop-arrow.png';
 
 
-export function ExperienceInput ({experienceData, experienceChange, experienceDelete}) {
+export function ExperienceInput ({
+    experienceData,
+    experienceChange,
+    experienceDelete,
+    experienceAdd
+    }) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
@@ -113,7 +118,7 @@ return (
                 <button className='add-education'
                     onClick={(e) => {
                         e.preventDefault();
-                        
+                        experienceAdd(tempExperienceData)
                     }}
                 >
                     Add +

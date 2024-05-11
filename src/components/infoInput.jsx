@@ -1,8 +1,6 @@
 import dropArrow from '../assets/drop-arrow.png';
 
 export function InfoInput({ infoDetails, onChange }) {
-    console.log(infoDetails)
-    console.log(onChange);
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
