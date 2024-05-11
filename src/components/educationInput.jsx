@@ -17,13 +17,11 @@ export function EducationInput ({
     function storeEducationInputs(educationID, property, value) {
 
         const activeIndex = getActiveIndex(tempEducationData, educationID);
-        console.log(activeIndex)
 
         const tempStorage = [...tempEducationData]
         tempStorage[activeIndex] = {
             ...tempStorage[activeIndex], [property]: value
         }
-        console.log(tempStorage)
         
         setTempData(tempStorage)
     }

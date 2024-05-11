@@ -7,6 +7,7 @@ import { InfoDisplay } from './components/infoDisplay';
 import { EducationInput } from './components/educationInput';
 import { EducationDisplay } from './components/educationDisplay';
 import { ExperienceInput } from './components/experienceInput';
+import { ExperienceDisplay } from './components/experienceDisplay';
 
 import './App.css'
 import './styles/pageStructure.css';
@@ -30,7 +31,6 @@ function App() {
   }
 
   function handleChangeEducation(currentEducationData) {
-    console.log('changing it')
     setEducationInfo(currentEducationData);
   }
 
@@ -49,6 +49,11 @@ function App() {
         
       }
     }
+  }
+
+  function handleChangeExperience(currentExperienceData) {
+    console.log('experiencing')
+    setExperienceInfo(currentExperienceData);
   }
 
 
@@ -94,6 +99,7 @@ function App() {
           
           <ExperienceInput
             experienceData = {experienceInfo}
+            experienceChange = {handleChangeExperience}
           />
         </section>
         <section className='display-card'>
@@ -103,6 +109,11 @@ function App() {
           />
           <EducationDisplay
             educationData = {educationInfo}
+          />
+
+          <ExperienceDisplay
+            experienceData = {experienceInfo}
+            
           />
             
         </section>
