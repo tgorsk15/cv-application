@@ -1,5 +1,4 @@
 .experience-edit-form {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -30,3 +29,31 @@
     display: flex;
 }
 
+
+/* Display side */
+
+.experience-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0px 15px;
+}
+
+.employer-display {
+    font-weight: bold;
+}
+
+.role-display {
+    font-style: italic;
+}
+
+.employer-dates-display {
+    font-style: oblique;
+}
+
+.experience-title {
+    border-bottom: 3px solid black;
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
