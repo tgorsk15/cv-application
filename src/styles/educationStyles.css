@@ -2,6 +2,11 @@
 
 .education-header {
     margin-top: 30px;
+    direction: ltr;
+}
+
+.education-inputs-container {
+    direction: ltr;
 }
 
 .education-edit-form {

@@ -1,3 +1,11 @@
+.experience-header {
+    direction: ltr;
+}
+
+.experience-inputs-container {
+    direction: ltr;
+}
+
 .experience-edit-form {
     display: flex;
     flex-direction: column;
