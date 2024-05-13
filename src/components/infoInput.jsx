@@ -4,14 +4,6 @@ export function InfoInput({ infoDetails, onChange }) {
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
-    // use this for expanding and contracting form:
-    // function toggleForm() {
-
-    // }
-
-    function submitInfo(e) {
-        e.preventDefault();
-    }
 
     return (
         <>

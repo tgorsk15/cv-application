@@ -17,11 +17,8 @@ import './styles/experienceStyles.css';
 
 
 function App() {
-  // console.log('app running')
   const [personalInfo, setPersonalInfo] = useState(initialInfoDetails)
-
   const [educationInfo, setEducationInfo] = useState(educationDataSet);
-
   const [experienceInfo, setExperienceInfo] = useState(experienceDataSet)
 
 
@@ -37,7 +34,6 @@ function App() {
 
   
   function handleDeleteEducation(currentEducationData, educationID ) {
-    console.log(educationID)
     
     for (let i = 0; i < currentEducationData.length; i++) {
       if (currentEducationData[i].id === educationID) {
@@ -51,16 +47,13 @@ function App() {
   }
 
   function handleChangeExperience(currentExperienceData) {
-    console.log('experiencing')
     setExperienceInfo(currentExperienceData);
   }
 
   function handleDeleteExperience(currentExperienceData, experienceID) {
-    console.log(experienceID);
     for (let i = 0; i < currentExperienceData.length; i++) {
-      if (currentExperienceData[i].id === experienceID) {
-        console.log(`Bag the bitch ${currentExperienceData[i].employer}`)
 
+      if (currentExperienceData[i].id === experienceID) {
         currentExperienceData.splice(i, 1);
         console.log(currentExperienceData)
         const newExperienceData = [...currentExperienceData];
@@ -71,7 +64,6 @@ function App() {
 
 
   function handleAddItem(currentData) {
-    console.log(currentData);
     // check to see if it's education or experience being added
     if (currentData[0].school) {
       const newEducation = {

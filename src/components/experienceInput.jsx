@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import dropArrow from '../assets/drop-arrow.png';
 
 
 export function ExperienceInput ({
@@ -13,7 +12,6 @@ export function ExperienceInput ({
 
     function storeExperienceInputs(experienceID, property, value) {
         const activeIndex = getActiveIndex(tempExperienceData, experienceID);
-        console.log(activeIndex)
 
         const tempStorage = [...tempExperienceData]
         tempStorage[activeIndex] = {
@@ -24,7 +22,6 @@ export function ExperienceInput ({
     }
 
     function getActiveIndex(dataArray, id) {
-        console.log(id);
         for (let i = 0; i < dataArray.length; i++) {
             if (dataArray[i].id === id) {
                 return i

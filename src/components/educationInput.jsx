@@ -10,12 +10,10 @@ export function EducationInput ({
     const arrowIcon = new Image()
     arrowIcon.src = dropArrow;
 
-    // let educationStorage = educationData
     const [tempEducationData, setTempData] = useState(educationData)
 
 
     function storeEducationInputs(educationID, property, value) {
-
         const activeIndex = getActiveIndex(tempEducationData, educationID);
 
         const tempStorage = [...tempEducationData]
@@ -27,7 +25,6 @@ export function EducationInput ({
     }
 
     function getActiveIndex(dataArray, id) {
-        console.log(id);
         for (let i = 0; i < dataArray.length; i++) {
             if (dataArray[i].id === id) {
                 return i
@@ -51,7 +48,6 @@ export function EducationInput ({
 
             <div className='education-inputs-container'>
                 {tempEducationData.map((education) => {
-                    // const educationStorage = education
                     
                     return (
                         <form action="push" className='education-edit-form' key={education.id}>
