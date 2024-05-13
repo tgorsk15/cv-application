@@ -1,5 +1,6 @@
 .info-header {
     direction: ltr;
+    color: white;
 }
 
 .info-inputs-container {
@@ -13,6 +14,7 @@
     flex-direction: column;
     border-radius: 25px;
     padding: 12px;
+    color: black;
 }
 
 .info-form > label {

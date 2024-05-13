@@ -1,5 +1,6 @@
 .experience-header {
     direction: ltr;
+    color: white;
 }
 
 .experience-inputs-container {
@@ -60,6 +61,9 @@
 
 
 /* Display side */
+.experience-display-container {
+    color: black;
+}
 
 .experience-display {
     display: flex;
